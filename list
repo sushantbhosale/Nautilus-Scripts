@@ -1,0 +1,30 @@
+#!/bin/bash
+
+## Author : Sushant Bhosale <sushantbhosale91@gmail.com>
+
+IFS=$'\n'
+
+cd /media/
+
+array=(`ls`)
+
+len=${#array[*]}
+
+i=0
+
+while [ $i -lt $len ]; do
+
+	echo "$i: ${array[$i]}"
+	let i++
+
+done
+
+echo "Enter the folder to copy: "
+read ch
+
+for FILENAME in $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS
+do
+        cp $FILENAME /media/${array[$ch]}
+done
+
+exit 0

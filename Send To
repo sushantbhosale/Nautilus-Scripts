@@ -1,0 +1,11 @@
+#!/bin/bash
+
+## Authur : Sushant Bhosale <sushantbhosale91@gmail.com>
+
+IFS=$'\n'
+
+cd ~/programs/bash/
+
+gnome-terminal --command='./list.sh'
+
+exit 0
